@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<div>
+	<hr>
+	
+	<h2>All Blogs</h2>
+	<span class="clearfix"></span>
+	</hr>
+	<hr>
+	</hr>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>blog id</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>category</th>
+				<th>date</th>
+				<th>postedby</th>
+				<th>Like</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="myblogs in blogs">
+				<td>{{myblogs.blog_id}}</td>
+				<td>{{myblogs.blogTitle}}</td>
+				<td>{{myblogs.blogDescription}}</td>
+				<td>{{myblogs.category}}</td>
+				<td>{{myblogs.date}}</td>
+				<td>{{myblogs.postedBy}}</td>
+				<td><button type="button" class="btn btn-primary btn-sm "
+						data-toggle="modal" data-target="#likeblog"
+						ng-click="likeBlog(blog)">Like</button></td>
+				
+			</tr>
+		</tbody>
+	</table>

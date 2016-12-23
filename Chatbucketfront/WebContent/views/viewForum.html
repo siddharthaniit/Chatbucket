@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<div>
+	<hr>
+	
+	<h2>All Forum</h2>
+	<span class="clearfix"></span>
+	</hr>
+	<hr>
+	</hr>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Forum_id</th>
+				<th>questionTitle</th>
+				<th>questionDescription</th>
+				
+				<th>date</th>
+				<th>postedby</th>
+				<th>Like</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="forum in forums">
+				<td>{{forum.Forum_id}}</td>
+				<td>{{forum.questionTitle}}</td>
+				<td>{{forum.questionDescription}}</td>
+				
+				<td>{{forum.date}}</td>
+				<td>{{forum.postedBy}}</td>
+				<td><button type="button" class="btn btn-primary btn-sm "
+						data-toggle="modal" data-target="#likeblog"
+						ng-click="likeBlog(forum)">Like</button></td>
+				
+			</tr>
+		</tbody>
+	</table>
